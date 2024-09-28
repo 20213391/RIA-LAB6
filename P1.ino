@@ -51,7 +51,7 @@ float waitT  = 500;  // Waiting time of each sequence in ms
 
 // Velocity target sequences
 float vxSeq[] = {0,0,-0.1,0.1,-0.1,0.1,-0.1,0.1,0,0}; // X Axis linear velocity sequence
-float vySeq[] = {/* COMPLETE HERE */}; // Y Axis linear velocity sequence
+float vySeq[] = {0.1,-0.1,0,0,0.1,0.1,-0.1,-0.1,0,0}; // Y Axis linear velocity sequence
 float vwSeq[] = {/* COMPLETE HERE */}; // Z Axis angular velocity sequence
 
 // Dimensions

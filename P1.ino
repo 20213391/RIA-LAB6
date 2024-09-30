@@ -50,9 +50,9 @@ float T      = 1000; // Time of each sequence in ms
 float waitT  = 500;  // Waiting time of each sequence in ms
 
 // Velocity target sequences
-float vxSeq[] = {0, 0, -0.1, 0.1, -0.1, 0.1, -0.1, 0.1, 0, 0 /* COMPLETE HERE */}; // X Axis linear velocity sequence
-float vySeq[] = {0.1, -0.1, 0, 0, 0.1, 0.1, -0.1, -0.1, 0, 0/* COMPLETE HERE */}; // Y Axis linear velocity sequence
-float vwSeq[] = {0, 0, 0, 0, 0, 0, 0, 0, -PI/10, PI/10/* COMPLETE HERE */}; // Z Axis angular velocity sequence
+float vySeq[] = {0, 0, -0.18, 0.18, -0.1, 0.18, -0.18, 0.18, 0, 0 /* COMPLETE HERE */}; // X Axis linear velocity sequence
+float vxSeq[] = {0.18, -0.18, 0, 0, 0.18, 0.18, -0.18, -0.18, 0, 0/* COMPLETE HERE */}; // Y Axis linear velocity sequence
+float vwSeq[] = {0, 0, 0, 0, 0, 0, 0, 0, -PI/6, PI/6/* COMPLETE HERE */}; // Z Axis angular velocity sequence
 
 // Dimensions
 const double a_b = 0.21 + 0.195 /* COMPLETE HERE */ ; // a+b
@@ -116,8 +116,8 @@ void CalculateVelAng(double vx, double vy, double vw) {
   // Cinemática inversa: calcular velocidades angulares de cada rueda
   w[0] = (vx - vy - vw * a_b) / R;
   w[1] = (vx + vy + vw * a_b) / R;
-  w[2] = (vx - vy + vw * a_b) / R;
-  w[3] = (vx + vy - vw * a_b) / R;
+  w[2] = (vx + vy - vw * a_b) / R;
+  w[3] = (vx - vy + vw * a_b) / R;
   /* COMPLETE HERE */
 
   for (int i = 0; i < NMOTORS; i++) {
